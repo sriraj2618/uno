@@ -1,146 +1,205 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-html, body, [class*="css"] {
+html,
+body,
+[class*="css"] {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Background */
-.stApp{
-    background: linear-gradient(135deg,#0f172a,#1e3a8a,#312e81);
-    background-size:400% 400%;
-    animation: gradient 12s ease infinite;
+/* ---------------- Background ---------------- */
+
+.stApp {
+    background: linear-gradient(135deg, #000000, #0b0b0b, #151515);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
 
-@keyframes gradient{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-/* Hide Streamlit Menu */
-#MainMenu{
-    visibility:hidden;
-}
-footer{
-    visibility:hidden;
-}
-header{
-    visibility:hidden;
+/* ---------------- Hide Streamlit ---------------- */
+
+#MainMenu {
+    visibility: hidden;
 }
 
-/* Title */
-.title{
-    text-align:center;
-    padding-top:20px;
+footer {
+    visibility: hidden;
 }
 
-.title h1{
-    color:white;
-    font-size:55px;
-    font-weight:700;
+header {
+    visibility: hidden;
 }
 
-.title h3{
-    color:#d1d5db;
-    font-weight:300;
+/* ---------------- Title ---------------- */
+
+.title {
+    text-align: center;
+    padding-top: 20px;
 }
 
-.title span{
-    color:#38bdf8;
-    font-weight:bold;
+.title h1 {
+    color: white;
+    font-size: 55px;
+    font-weight: 700;
 }
 
-/* Upload Box */
-[data-testid="stFileUploader"]{
-    border:2px dashed #60a5fa;
-    border-radius:20px;
-    padding:25px;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(18px);
+.title h3 {
+    color: #d4d4d4;
+    font-weight: 300;
 }
 
-/* Image */
-img{
-    border-radius:18px;
+.title span {
+    color: #ffffff;
+    font-weight: bold;
 }
 
-/* Glass Cards */
-[data-testid="stVerticalBlock"]{
-    background:rgba(255,255,255,.07);
-    border-radius:20px;
-    padding:18px;
-    backdrop-filter:blur(15px);
+/* ---------------- Sidebar ---------------- */
+
+section[data-testid="stSidebar"] {
+    background: rgba(20, 20, 20, 0.95);
+    border-right: 1px solid #333;
 }
 
-/* Buttons */
-.stButton>button{
-
-    width:100%;
-
-    border:none;
-
-    border-radius:12px;
-
-    color:white;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    padding:12px;
-
-    background:linear-gradient(90deg,#2563eb,#7c3aed);
-
-    transition:.3s;
+section[data-testid="stSidebar"] * {
+    color: white;
 }
 
-.stButton>button:hover{
+/* ---------------- Upload Box ---------------- */
 
-    transform:scale(1.04);
-
-    box-shadow:0px 0px 25px #60a5fa;
+[data-testid="stFileUploader"] {
+    border: 2px dashed white;
+    border-radius: 20px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(15px);
 }
 
-/* Download Button */
-.stDownloadButton>button{
+/* ---------------- Images ---------------- */
 
-    width:100%;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:#16a34a;
-
-    color:white;
-
-    font-weight:bold;
-
-    font-size:18px;
+img {
+    border-radius: 18px;
 }
 
-.stDownloadButton>button:hover{
+/* ---------------- Glass Cards ---------------- */
 
-    background:#22c55e;
-
-    transform:scale(1.04);
+[data-testid="stVerticalBlock"] {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    padding: 18px;
+    backdrop-filter: blur(18px);
 }
 
-/* Progress */
-.stProgress>div>div>div{
+/* ---------------- Buttons ---------------- */
 
-    background:#38bdf8;
+.stButton>button {
+
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    background: linear-gradient(90deg, #111111, #333333);
+    transition: 0.3s;
 }
 
-/* Success */
-.stAlert{
+.stButton>button:hover {
 
-    border-radius:15px;
+    transform: scale(1.04);
+    background: linear-gradient(90deg, #444444, #666666);
+    box-shadow: 0px 0px 18px white;
 }
 
-/* Text */
-h1,h2,h3,h4,p,label{
+/* ---------------- Download Button ---------------- */
 
-    color:white !important;
+.stDownloadButton>button {
+
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: #16a34a;
+}
+
+.stDownloadButton>button:hover {
+
+    background: #22c55e;
+    transform: scale(1.03);
+}
+
+/* ---------------- Progress ---------------- */
+
+.stProgress>div>div>div {
+
+    background: white;
+}
+
+/* ---------------- Alerts ---------------- */
+
+.stAlert {
+
+    border-radius: 15px;
+}
+
+/* ---------------- Metrics ---------------- */
+
+[data-testid="metric-container"] {
+
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 15px;
+    padding: 12px;
+}
+
+/* ---------------- Text ---------------- */
+
+h1,
+h2,
+h3,
+h4,
+p,
+label,
+span,
+div {
+    color: white !important;
+}
+
+/* ---------------- Divider ---------------- */
+
+hr {
+    border: 1px solid #444;
+}
+
+/* ---------------- Scroll Bar ---------------- */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: white;
 }
