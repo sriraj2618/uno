@@ -23,7 +23,7 @@ local_css("style.css")
 
 with st.sidebar:
 
-    st.image("assets/logo.jpeg", use_container_width=True)
+    st.image("logo.jpeg", use_container_width=True)
 
     st.title("🃏 UNO AI")
 
