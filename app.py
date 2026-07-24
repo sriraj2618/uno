@@ -85,8 +85,8 @@ if uploaded_file:
 
     image = Image.open(uploaded_file)
 
-if image.mode != "RGB":
-    image = image.convert("RGB")
+    if image.mode != "RGB":
+        image = image.convert("RGB")
 
     col1, col2 = st.columns(2)
 
