@@ -34,17 +34,17 @@ Upload an image of an UNO card.
 
 The AI can detect:
 
-✅ Number Cards
+ Number Cards
 
-✅ Skip
+Skip
 
-✅ Reverse
+Reverse
 
-✅ Draw Two
+Draw Two
 
-✅ Wild
+Wild
 
-✅ Wild Draw Four
+Wild Draw Four
 """)
 
     st.write("---")
